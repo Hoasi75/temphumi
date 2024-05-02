@@ -1,0 +1,30 @@
+# Delen en bewerken mag maar laat deze eerste regels staan.
+# Bron : https://www.huizebruin.nl
+# Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
+# © Huizebruin.nl
+substitutions:
+  name: "s0tool-temphumi"
+
+esphome:
+  name: ${name}
+  name_add_mac_suffix: true
+  comment: '${device_description}'
+  project:
+    name: "hoasi.${name}"
+    version: "${vdate}"
+  min_version: 2024.2.0
+esp8266:
+  board:  d1_mini
+  restore_from_flash: true
+  
+dashboard_import:
+  package_import_url: github://Hoasi75/temphumi/install.yaml
+
+packages:
+  remote_package:
+    url: https://github.com/Hoasi75/temphumi/
+    ref: main
+    files:
+      - basis.yaml
+      - temphumi.yaml
+    refresh: 0d 
