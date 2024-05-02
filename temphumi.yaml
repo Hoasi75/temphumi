@@ -1,0 +1,12 @@
+sensor:
+  - platform: dht
+    pin: D2
+    temperature:
+      name: "4 - Temperatur Hobbyraum"
+      unit_of_measurement: "°C"
+    humidity:
+      name: "5 - Luftfeuchtigkeit Hobbyraum"
+      unit_of_measurement: "%"
+    # Update intervel in Seconds
+    update_interval: 60s
+    model: DHT11
