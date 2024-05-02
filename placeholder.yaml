@@ -51,7 +51,7 @@ binary_sensor:
   - platform: gpio
     id: water_sensor_status
     name: "Water sensor status"
-    internal: False
+    internal: true
     pin:
       number: D2
       allow_other_uses: true
@@ -61,7 +61,6 @@ binary_sensor:
     on_press:
       - then:
           lambda: id(total_water_pulses) += 1;
-    internal: True
 
 #https://github.com/huizebruin/s0tool/issues/156
 number:
