@@ -1,0 +1,98 @@
+# Delen en bewerken mag maar laat deze eerste regels staan.
+# Bron : https://s0tool.nl
+# Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
+# © Huizebruin.nl & S0tool.nl
+substitutions:
+  device_description: ${name} from s0tool.nl version ${vdate}.
+  vdate: "v24.02.23.35" 
+  date: "23-02-2024"
+
+preferences:
+  flash_write_interval: 120min 
+
+improv_serial:
+  
+wifi:
+  ap:
+
+web_server:
+  port: 80
+  
+captive_portal:
+
+# ⬇ Enable logging ⬇ # 
+logger:
+  level: INFO
+  esp8266_store_log_strings_in_flash: false
+
+ota:
+#  ⬇ Enable time component voor reset elke nacht ⬇ #
+time:
+  - platform: homeassistant
+    id: time_homeassistant
+    on_time_sync:
+      - component.update: S0tool_uptime_timestamp  
+
+sensor:
+#------------------------#  sensoren #------------------------#
+  - platform: uptime
+    id: S0tool_uptime
+
+  - platform: template
+    id: S0tool_uptime_timestamp
+    name: "${name} online sinds"
+    device_class: "timestamp"
+    accuracy_decimals: 0
+    update_interval: never
+    icon: 'mdi:clock-start'
+    entity_category: diagnostic
+    lambda: |-
+      static float timestamp = (
+        id(time_homeassistant).utcnow().timestamp - id(S0tool_uptime).state
+      );
+      return timestamp;  
+
+# ⬇ versie verbinding informatie sensoren voor in ha ⬇ #
+  # WiFi signal
+  - platform: wifi_signal
+    name: "${name} - WiFi Signal"
+    update_interval: 120s
+    
+text_sensor:
+  - platform: template
+    name: "s0tool_version"
+    id: s0tool_versie
+    icon: 'mdi:alpha-v-circle-outline' 
+    update_interval: 6h
+    entity_category: diagnostic
+    lambda: |-
+      return {"${vdate}"};
+
+  - platform: wifi_info
+    ip_address:
+      name: "${name} IP-adress"
+      id: s0tool_ip_adres
+      icon: mdi:ip-network
+
+    mac_address:
+      name: "${name} Mac-adress"
+      id: s0tool_mac_adres
+      icon: mdi:folder-key-network-outline
+
+#  restart button  #
+button:  
+  - platform: restart
+    name: "${name} Restart device"
+    entity_category: diagnostic
+    
+# Factory Reset Switch from ESPHome v2022.09
+  - platform: factory_reset
+    name: "Restart with Factory Default Settings"
+    entity_category: diagnostic
+    disabled_by_default: True
+
+  # safe mode button
+  - platform: safe_mode
+    name: "Safe Mode"
+    entity_category: diagnostic
+    disabled_by_default: True
