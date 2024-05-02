@@ -97,42 +97,6 @@ sensor:
       lambda: return x * atof(id(Select_pulse_water).state.c_str()) * 1000;
     internal: True
 
-#------------------------# Temperature & Humidity #------------------------#
-
-# ⬇ Totaal watermeter ⬇ #
-    total:
-      id: sensor_pulse_meter_total
-      name: "Wasserzähler Total"
-      state_class: "total_increasing"
-      device_class: water
-      icon: mdi:water
-      unit_of_measurement: "m³"
-      accuracy_decimals: 3
-      filters:
-        - multiply: 0.001
-      internal: True
-
-# ⬇ Watermeter stand bij benadering ⬇ #
-  - platform: template
-    id: watermeter_total
-    name: "Wasserzähler Zählerstand"
-    state_class: "total_increasing"
-    device_class: water
-    icon: mdi:water
-    unit_of_measurement: "m³"
-    update_interval: 30s
-    accuracy_decimals: 3
-    lambda: return id(initial_water_usage) + (id(total_water_pulses) * atof(id(Select_pulse_water).state.c_str()));
-    internal: True
-
-# ⬇ Waterpulses  only web interface for debugging ⬇ #
-  - platform: template
-    id: watermeter_flow_total
-    name: "watermeter flow total"
-    state_class: "total_increasing"
-    accuracy_decimals: 0
-    lambda: return id(total_water_pulses);
-    internal: True
 
 
 
