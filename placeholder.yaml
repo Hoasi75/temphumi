@@ -78,24 +78,7 @@ number:
       - lambda: id(total_water_pulses) = x * 1000;
     internal: True
 
-sensor:
-#------------------------# Watermeter #------------------------#
-# ⬇ watermeter puls ⬇ #
-  - platform: pulse_meter #pulse_counter
-    internal_filter_mode: "PULSE"
-    internal_filter: 50ms
-    pin: 
-      number: D5
-      allow_other_uses: true
-    id: watermeter_flow
-    name: "Wasserzähler Fluss"
-    state_class: measurement
-    unit_of_measurement: "l/min"
-    accuracy_decimals: 1
-    icon: "mdi:water-pump"
-    filters:
-      lambda: return x * atof(id(Select_pulse_water).state.c_str()) * 1000;
-    internal: True
+
 
 
 
