@@ -15,6 +15,7 @@ api:
         - globals.set:
             id: total_water_pulses
             value:  "0"
+
 globals:
   - id: initial_water_usage
     type: float
@@ -43,14 +44,13 @@ select:
         - logger.log:
             format: "Chosen option: %s "
             args: ["x.c_str()"]
-    internal: True
 
 #------------------------# Watermeter #------------------------#
 binary_sensor:
   - platform: gpio
     id: water_sensor_status
     name: "Water sensor status"
-    internal: true
+    internal: False
     pin:
       number: D5
       allow_other_uses: true
