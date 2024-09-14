@@ -3,7 +3,7 @@
 # Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
 # © Huizebruin.nl
 substitutions:
-  name: "s0tool-temphumi-heizkeller"
+  name: "s0tool-temphumi-heizk"
 
 esphome:
   name: ${name}
