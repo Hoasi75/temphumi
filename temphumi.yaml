@@ -2,10 +2,10 @@ sensor:
   - platform: dht
     pin: D2
     temperature:
-      name: "1 - Temperatur Badezimmer"
+      name: "1 - Temperatur Heizungskeller"
       unit_of_measurement: "°C"
     humidity:
-      name: "2 - Luftfeuchtigkeit Badezimmer"
+      name: "2 - Luftfeuchtigkeit Heizungskeller"
       unit_of_measurement: "%"
     # Update intervel in Seconds
     update_interval: 60s
