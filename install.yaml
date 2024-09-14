@@ -3,7 +3,7 @@
 # Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
 # © Huizebruin.nl
 substitutions:
-  name: "s0tool-temphumi"
+  name: "s0tool-temphumi-heizkeller"
 
 esphome:
   name: ${name}
@@ -16,6 +16,10 @@ esphome:
 esp8266:
   board:  d1_mini
   restore_from_flash: true
+
+ota:
+  - platform: esphome
+    password: "9f69d98dc0a71cccc25f9214d6a78ce2"
   
 dashboard_import:
   package_import_url: github://Hoasi75/temphumi/install.yaml
