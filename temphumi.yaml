@@ -1,11 +1,11 @@
-zisensor:
+sensor:
   - platform: dht
     pin: D2
     temperature:
-      name: "1 - Temperatur"
+      name: "1 - Temperatur Badezimmer"
       unit_of_measurement: "°C"
     humidity:
-      name: "2 - Luftfeuchtigkeit"
+      name: "2 - Luftfeuchtigkeit Badezimmer"
       unit_of_measurement: "%"
     # Update intervel in Seconds
     update_interval: 60s
