@@ -1,5 +1,5 @@
 api:
- sensor:
+# sensor:
   - platform: dht
     pin: D2
     temperature:
