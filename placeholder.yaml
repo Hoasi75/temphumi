@@ -28,7 +28,7 @@ globals:
 select:
   # ⬇ water per m3 rate ⬇ #
   - platform: template
-    name: "Pulsrate water per m3"
+    name: "9 - nicht verwendet"
     id: Select_pulse_water
     optimistic: true
     options:
@@ -49,7 +49,7 @@ select:
 binary_sensor:
   - platform: gpio
     id: water_sensor_status
-    name: "Water sensor status"
+    name: "9 - nicht verwendet"
     internal: False
     pin:
       number: D2
@@ -63,7 +63,7 @@ binary_sensor:
 
 #https://github.com/huizebruin/s0tool/issues/156
 number:
-  - name: Initial meterstand m3
+  - name: 9 - nicht verwendet
     platform: template
     id: initial_water_value
     device_class: water
@@ -87,7 +87,7 @@ sensor:
       number: D2
       allow_other_uses: true
     id: watermeter_flow
-    name: "1 - Wasserzähler Fluss"
+    name: "9 - nicht verwendet"
     state_class: measurement
     unit_of_measurement: "l/min"
     accuracy_decimals: 1
@@ -100,7 +100,7 @@ sensor:
 # ⬇ Totaal watermeter ⬇ #
     total:
       id: sensor_pulse_meter_total
-      name: "2 - Wasserzähler Total"
+      name: "9 - nicht verwendet"
       state_class: "total_increasing"
       device_class: water
       icon: mdi:water
@@ -112,7 +112,7 @@ sensor:
 # ⬇ Watermeter stand bij benadering ⬇ #
   - platform: template
     id: watermeter_total
-    name: "3 - Wasserzähler Zählerstand"
+    name: "9 - nicht verwendet"
     state_class: "total_increasing"
     device_class: water
     icon: mdi:water
@@ -124,7 +124,7 @@ sensor:
 # ⬇ Waterpulses  only web interface for debugging ⬇ #
   - platform: template
     id: watermeter_flow_total
-    name: "watermeter flow total"
+    name: "9 - nicht verwendet"
     state_class: "total_increasing"
     accuracy_decimals: 0
     lambda: return id(total_water_pulses);
