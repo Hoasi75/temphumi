@@ -1,5 +1,6 @@
 api:
-# sensor:
+"components":[
+  sensor
   - platform: dht
     pin: D2
     temperature:
@@ -11,3 +12,4 @@ api:
     # Update intervel in Seconds
     update_interval: 60s
     model: DHT11
+]
