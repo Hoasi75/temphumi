@@ -25,7 +25,7 @@ logger:
   level: INFO
   esp8266_store_log_strings_in_flash: false
 
-ota:
+#ota:
 #  ⬇ Enable time component voor reset elke nacht ⬇ #
 #time:
 #  - platform: homeassistant
