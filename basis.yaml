@@ -55,7 +55,7 @@ sensor:
 # ⬇ versie verbinding informatie sensoren voor in ha ⬇ #
   # WiFi signal
   - platform: wifi_signal
-    name: "${name} - WiFi Signal"
+    name: "8 - ${name} - WiFi Signal"
     update_interval: 120s
     
 text_sensor:
