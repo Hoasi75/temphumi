@@ -27,11 +27,11 @@ logger:
 
 ota:
 #  ⬇ Enable time component voor reset elke nacht ⬇ #
-time:
-  - platform: homeassistant
-    id: time_homeassistant
-    on_time_sync:
-      - component.update: S0tool_uptime_timestamp  
+#time:
+#  - platform: homeassistant
+#    id: time_homeassistant
+#    on_time_sync:
+#      - component.update: S0tool_uptime_timestamp  
 
 sensor:
 #------------------------#  sensoren #------------------------#
