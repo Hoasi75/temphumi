@@ -2,10 +2,10 @@ sensor:
   - platform: dht
     pin: D5
     temperature:
-      name: "1 - Temperatur Waschraum"
+      name: "1 - Temperatur Buero"
       unit_of_measurement: "°C"
     humidity:
-      name: "2 - Luftfeuchtigkeit Waschraum"
+      name: "2 - Luftfeuchtigkeit Buero"
       unit_of_measurement: "%"
     # Update intervel in Seconds
     update_interval: 60s
