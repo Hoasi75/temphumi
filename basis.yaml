@@ -96,3 +96,17 @@ button:
     name: "Safe Mode"
     entity_category: diagnostic
     disabled_by_default: True
+
+  # Sensoren
+sensor:
+  - platform: dht
+    pin: D5
+    temperature:
+      name: "4 - Temperatur Waschraum"
+      unit_of_measurement: "°C"
+    humidity:
+      name: "5 - Luftfeuchtigkeit Waschraum"
+      unit_of_measurement: "%"
+    # Update intervel in Seconds
+    update_interval: 60s
+    model: DHT11
