@@ -1,7 +1,3 @@
-api:
-  message:
-    "API running."
-    
 sensor:
   - platform: dht
     pin: D5
