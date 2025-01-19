@@ -1,15 +1,16 @@
 api:
-"components":[
-  sensor
+  message:
+    "API running."
+    
+sensor:
   - platform: dht
-    pin: D2
+    pin: D5
     temperature:
-      name: "1 - Temperatur Büro"
+      name: "4 - Temperatur Waschraum"
       unit_of_measurement: "°C"
     humidity:
-      name: "2 - Luftfeuchtigkeit Büro"
+      name: "5 - Luftfeuchtigkeit Waschraum"
       unit_of_measurement: "%"
     # Update intervel in Seconds
     update_interval: 60s
     model: DHT11
-]
