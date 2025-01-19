@@ -1,6 +1,6 @@
 sensor:
   - platform: dht
-    pin: D5
+    pin: D2
     temperature:
       name: "1 - Temperatur Buero"
       unit_of_measurement: "°C"
