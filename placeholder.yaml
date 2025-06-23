@@ -4,6 +4,9 @@
 # © Huizebruin.nl
 #  # ⬇ Enable Home Assistant API ⬇ # 
 api:
+#encryption:
+  key: “ggrrffggrrffggrrff”
+  password: Hasimausi1
   services:
     - service: meterstand_water
       variables:
