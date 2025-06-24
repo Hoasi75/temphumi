@@ -31,5 +31,5 @@ packages:
     files:
       - basis.yaml
       - temphumi.yaml
-     - placeholder.yaml
+      - placeholder.yaml
     refresh: 0d 
