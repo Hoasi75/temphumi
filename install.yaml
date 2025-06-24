@@ -16,6 +16,10 @@ esphome:
 esp8266:
   board:  d1_mini
   restore_from_flash: true
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "JI5uuWVhbR01o5uElC5J5SSMSKCf6CFC2uHnVheJ8r8="
 
 ota:
   - platform: esphome
