@@ -4,7 +4,7 @@
 # © Huizebruin.nl
 #  # ⬇ Enable Home Assistant API ⬇ # 
 api:
-#encryption:
+encryption:
   key: “ggrrffggrrffggrrff”
   password: Hasimausi1
   services:
