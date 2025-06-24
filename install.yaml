@@ -3,7 +3,7 @@ o# Delen en bewerken mag maar laat deze eerste regels staan.
 # Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
 # © Huizebruin.nl
 substitutions:
-  name: "s0tool-temphumi-buero"
+  name: "s0tool-temphumi-hobbyraum"
 
 esphome:
   name: ${name}
