@@ -4,9 +4,7 @@
 # © Huizebruin.nl
 #  # ⬇ Enable Home Assistant API ⬇ # 
 api:
-  encryption:
-    key: "Z+ZY6Pr9ZpQX0yBRnYM0wyK1TyWCVvTWxWVo+FQFQy8="
-      services:
+ services:
     - service: meterstand_water
       variables:
         meter_value: float
