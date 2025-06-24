@@ -1,3 +1,12 @@
+# Delen en bewerken mag maar laat deze eerste regels staan.
+# Bron : https://www.huizebruin.nl
+# Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
+# © Huizebruin.nl
+#  # ⬇ Enable Home Assistant API ⬇ # 
+api:
+
+#------------------------# Temperature & Humidity #------------------------#
+
 sensor:
   - platform: dht
     pin: D2
