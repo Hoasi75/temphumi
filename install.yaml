@@ -3,7 +3,7 @@
 # Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
 # © Huizebruin.nl
 substitutions:
-  name: "s0tool-temphumi-buero"
+  name: "s0tool-temphumi-galerie"
 
 esphome:
   name: ${name}
@@ -35,5 +35,5 @@ packages:
     files:
       - basis.yaml
       - temphumi.yaml
-      - placeholder.yaml
+#      - placeholder.yaml
     refresh: 0d 
