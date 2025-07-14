@@ -9,9 +9,9 @@ output:
   - platform: esp8266_pwm
     id: output_blue
     pin: D4
-    name: "4 - Button Light"
  
 light:
   - platform: monochromatic
     output: output_blue
     id: blue_led
+    name: "4 - Blue Light"
