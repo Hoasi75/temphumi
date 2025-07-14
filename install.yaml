@@ -3,7 +3,7 @@
 # Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
 # © Huizebruin.nl
 substitutions:
-  name: "s0tool-temphumi-hobbyraum"
+  name: "s0tool-temphumibutton-bad"
 
 esphome:
   name: ${name}
@@ -19,7 +19,7 @@ esp8266:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "JI5uuWVhbR01o5uElC5J5SSMSKCf6CFC2uHnVheJ8r8="
+    key: "zn81wzTLbXhGSAyij0CN2sszamQZF7/LPSt8FJ06XX4="
 
 ota:
   - platform: esphome
