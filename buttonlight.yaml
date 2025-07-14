@@ -2,13 +2,13 @@
 
 binary_sensor:
   - platform: gpio
-    pin: D4
+    pin: D3
     name: "Red Button"
  
 output:
   - platform: esp8266_pwm
     id: output_blue
-    pin: D5
+    pin: D4
  
 light:
   - platform: monochromatic
