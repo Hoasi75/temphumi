@@ -1,6 +1,6 @@
 # Installation von TempHumiSwitch
 substitutions:
-  name: "s0tool-temphumibutton-bad"
+  name: "s0tool-temphumibut-bad"
 
 esphome:
   name: ${name}
