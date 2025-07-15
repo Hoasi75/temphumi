@@ -1,5 +1,3 @@
-# Button und Light für WW Zirkulation
-
 binary_sensor:
   - platform: gpio
     pin: D3
