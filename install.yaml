@@ -3,7 +3,7 @@
 # Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
 # © Huizebruin.nl
 substitutions:
-  name: "s0tool-temphumibut-bad"
+  name: "s0tool-temphumibut-kitch"
 
 esphome:
   name: ${name}
@@ -19,7 +19,7 @@ esp8266:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "zn81wzTLbXhGSAyij0CN2sszamQZF7/LPSt8FJ06XX4="
+    key: "X3bByy9s0ZmWRcmmQcMLIXckNhWN2ToaSdsrLayoe74="
 
 ota:
   - platform: esphome
