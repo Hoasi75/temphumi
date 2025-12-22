@@ -3,7 +3,7 @@
 # Bron File : https://github.com/huizebruin/s0tool/tree/main/esphome
 # © Huizebruin.nl
 substitutions:
-  name: "s0tool-temphumibut-kitch"
+  name: "s0tool-temphumi-buero"
 
 esphome:
   name: ${name}
@@ -19,7 +19,7 @@ esp8266:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "X3bByy9s0ZmWRcmmQcMLIXckNhWN2ToaSdsrLayoe74="
+    key: "JI5uuWVhbR01o5uElC5J5SSMSKCf6CFC2uHnVheJ8r8="
 
 ota:
   - platform: esphome
@@ -35,6 +35,6 @@ packages:
     files:
       - basis.yaml
       - temphumi.yaml
-      - buttonlight.yaml
+#      - buttonlight.yaml
 #      - placeholder.yaml
     refresh: 0d 
