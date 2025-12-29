@@ -1,7 +1,13 @@
 binary_sensor:
   - platform: gpio
-    pin: D3
     name: "3 - Blue Button"
+    pin:
+      number: D3
+      mode:
+        input: true
+        pullup: true
+    filters:
+      - delayed_on: 10ms
  
 output:
   - platform: esp8266_pwm
