@@ -35,6 +35,6 @@ packages:
     files:
       - basis.yaml
       - temphumi.yaml
-#      - buttonlight.yaml
+      - buttonlight.yaml
 #      - placeholder.yaml
     refresh: 0d 
