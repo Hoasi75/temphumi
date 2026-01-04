@@ -12,7 +12,7 @@ binary_sensor:
 output:
   - platform: esp8266_pwm
     id: output_blue
-    pin: D5
+    pin: D6
  
 light:
   - platform: monochromatic
