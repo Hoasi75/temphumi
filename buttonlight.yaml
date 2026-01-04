@@ -2,7 +2,7 @@ binary_sensor:
   - platform: gpio
     name: "3 - Blue Button"
     pin:
-      number: D3
+      number: D1
       mode:
         input: true
         pullup: true
@@ -12,7 +12,7 @@ binary_sensor:
 output:
   - platform: esp8266_pwm
     id: output_blue
-    pin: D6
+    pin: D2
  
 light:
   - platform: monochromatic
